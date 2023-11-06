@@ -1,0 +1,180 @@
+---
+layout: home
+title: POSTHUMAN
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Oswald", Arial, sans-serif; /* Use Oswald font and fallback to Arial if needed */
+        text-align: center;
+        background-color: #121717;
+        color: #a9b1ab;
+        margin: 0;
+        padding: 0;
+        position: relative; /* Make the body a positioning context */
+      }
+      .logo {
+        max-height: 100px !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+      }
+      header {
+        /* background-color: #333; */
+        color: #fff;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        font-size: 36px;
+        color: #fff;
+      }
+      p {
+        font-size: 18px;
+      }
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding-bottom: 50px; /* Reserve space for the footer */
+      }
+      .links {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        /* background-color: #333; */
+        /* color: #fff; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+        font-size: 20px;
+        margin: 10px 0;
+        padding: 10px 20px;
+        display: inline-block;
+        /* background-color: #fff; */
+        /* border: 1px solid #ccc; */
+        border-radius: 5px;
+        transition: background-color 0.2s, color 0.2s;
+      }
+      a:hover {
+        color: #fff;
+        /* background-color: #333; */
+      }
+      .button {
+        background-color: #64706a;
+        width: 30%;
+        color: #fff;
+        border-radius: 10px;
+        /* border: #fff; */
+        padding: 10px;
+        margin: 10px;
+      }
+      .button:hover {
+        background-color: #a9b1ab;
+        /* width: 30%; */
+        color: #64706a;
+        /* border-radius: 10px;
+        border: #fff; 
+        padding: 10px;
+        margin: 10px; */
+      }
+      .latest-release {
+        margin: 20px auto; /* Center the entire div horizontally */
+        max-width: 400px;
+        max-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Center the content vertically and horizontally */
+      }
+      .latest-release img {
+        max-width: 100%;
+        max-height: 400px; /* Set a maximum height for the logo image */
+        border: none; /* Remove the border */
+        margin: 0; /* Remove spacing between the image and the parent div */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .latest-release img:hover {
+        filter: brightness(
+          1.2
+        ); /* Increase brightness on hover (you can adjust the value) */
+      }
+      .cover-image {
+        margin: 0%;
+      }
+      .bio {
+        padding-bottom: 60px;
+        display: flex;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      footer {
+        position: absolute; /* Position the footer absolutely */
+        bottom: 0; /* Stick it to the bottom of the viewport */
+        width: 100%;
+        font-size: smaller;
+        /* background-color: #333; */
+        /* color: #fff; */
+        padding: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="{{ site.baseurl }}/assets/img/posthuman-logo-white.png"
+        alt="Posthuman Logo"
+      />
+    </header>
+    <main>
+      <div class="container">
+        <p class="bio">
+          <!-- Your band's bio here -->
+          Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro.
+          De carne lumbering animata corpora quaeritis.
+        </p>
+        <div class="latest-release">
+          <h1>Latest Release</h1>
+          <a
+            class="cover-image"
+            href="https://posthumanband.bandcamp.com/track/hopelessness"
+            target="_blank"
+          >
+            <img
+              src="{{ site.baseurl }}/assets/img/posthuman-hopelessness-cover.jpg"
+              alt="Latest Release Cover"
+            />
+          </a>
+        </div>
+        <div class="links">
+          <a class="button" href="#">Website</a>
+          <a class="button" href="#">YouTube</a>
+          <a class="button" href="#">Instagram</a>
+          <a class="button" href="#">Facebook</a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      Copyright {{ site.time | date: "%Y" }} - {{ page.title }} - Created by
+      Georgi Zhelyazkov
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+---
+layout: default
+title: POSTHUMAN
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Your CSS styles here */
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="{{ site.baseurl }}/assets/img/posthuman-logo-white.png"
+        alt="Posthuman Logo"
+      />
+    </header>
+    <main>
+      <div class="container">
+        <p class="bio">
+          <!-- Your band's bio here -->
+        </p>
+        <div class="latest-release">
+          <h1>Latest Release</h1>
+          <a
+            class="cover-image"
+            href="https://posthumanband.bandcamp.com/track/hopelessness"
+            target="_blank"
+          >
+            <img
+              src="{{ site.baseurl }}/assets/img/posthuman-hopelessness-cover.jpg"
+              alt="Latest Release Cover"
+            />
+          </a>
+        </div>
+        <div class="links">
+          <a class="button" href="#">Website</a>
+          <a class="button" href="#">YouTube</a>
+          <a class="button" href="#">Instagram</a>
+          <a class="button" href="#">Facebook</a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      Copyright {{ site.time | date: "%Y" }} - {{ page.title }} - Created by Georgi Zhelyazkov
+    </footer>
+  </body>
+</html>
