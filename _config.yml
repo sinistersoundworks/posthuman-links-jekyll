@@ -20,18 +20,42 @@
 
 title: POSTHUMAN
 email: contact@posthuman.band
+author: Georgi Zhelyazkov
 logo: assets/img/posthuman-logo-white.png
+background_image: assets/img/posthuman-web-bg.jpg
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username: jekyll
 
 # Latest release
 latest_release_image: assets/img/posthuman-hopelessness-cover.jpg
+
+# Links
+links:
+  - name: Bandcamp
+    icon: "fab fa-bandcamp"
+    url: "https://posthumanband.bandcamp.com"
+  - name: "Spotify"
+    icon: "fab fa-spotify"
+    url: "https://open.spotify.com/artist/32ecVDg6esdPpdJiakOrtw?si=wvXhEcmyRDWK3bqEeG35fg"
+  - name: "Apple Music"
+    icon: "fab fa-apple"
+    url: "https://music.apple.com/cz/artist/posthuman/1694781385"
+  # - name: "YouTube"
+  #   icon: "fab fa-youtube"
+  #   url: "https://www.youtube.com/user/example"
+  - name: "Instagram"
+    icon: "fab fa-instagram"
+    url: "https://www.instagram.com/posthuman.band/"
+  - name: "Facebook"
+    icon: "fab fa-facebook"
+    url: "https://www.facebook.com/posthumanband"
+  # - name: "Website"
+  #   icon: "fab fa-cloud"
+  #   url: "https://www.example.com"
 
 # Build settings
 theme: minima

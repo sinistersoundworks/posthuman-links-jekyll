@@ -11,7 +11,21 @@ title: POSTHUMAN
       href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/400f03ad58.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) for darkness */
+        z-index: -1;
+      }
       body {
         font-family: "Oswald", Arial, sans-serif; /* Use Oswald font and fallback to Arial if needed */
         text-align: center;
@@ -20,6 +34,11 @@ title: POSTHUMAN
         margin: 0;
         padding: 0;
         position: relative; /* Make the body a positioning context */
+        {% if site.background_image %}
+          background-image: url("{{ site.background_image }}");
+          background-size: cover;
+          background
+        {% endif %}
       }
       .logo {
         max-height: 100px !important;
@@ -46,6 +65,12 @@ title: POSTHUMAN
         max-width: 960px;
         margin: 0 auto;
         padding-bottom: 50px; /* Reserve space for the footer */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background-color: rgba(0, 0, 0, 0.6); Set the opacity (alpha) to 0.8 for 80% transparency */
+        background-blend-mode:saturation;
       }
       .links {
         margin-top: 60px;
@@ -74,7 +99,7 @@ title: POSTHUMAN
       }
       .button {
         background-color: #64706a;
-        width: 30%;
+        width: 100%;
         color: #fff;
         border-radius: 10px;
         /* border: #fff; */
@@ -86,7 +111,7 @@ title: POSTHUMAN
         /* width: 30%; */
         color: #64706a;
         /* border-radius: 10px;
-        border: #fff; 
+        border: #fff;
         padding: 10px;
         margin: 10px; */
       }
@@ -101,7 +126,7 @@ title: POSTHUMAN
       }
       .latest-release img {
         max-width: 100%;
-        max-height: 400px; /* Set a maximum height for the logo image */
+        max-height: 300px; /* Set a maximum height for the logo image */
         border: none; /* Remove the border */
         margin: 0; /* Remove spacing between the image and the parent div */
         display: flex;
@@ -111,16 +136,16 @@ title: POSTHUMAN
       }
       .latest-release img:hover {
         filter: brightness(
-          1.2
+          1.5
         ); /* Increase brightness on hover (you can adjust the value) */
       }
       .cover-image {
         margin: 0%;
       }
       .bio {
-        padding-bottom: 60px;
+        /* padding-bottom: 60px; */
         display: flex;
-        max-width: 100%;
+        max-width: 80%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -146,11 +171,7 @@ title: POSTHUMAN
     </header>
     <main>
       <div class="container">
-        <p class="bio">
-          <!-- Your band's bio here -->
-          Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro.
-          De carne lumbering animata corpora quaeritis.
-        </p>
+        <p class="bio">{{ site.description }}</p>
         <div class="latest-release">
           <h1>Latest Release</h1>
           <a
@@ -165,16 +186,17 @@ title: POSTHUMAN
           </a>
         </div>
         <div class="links">
-          <a class="button" href="#">Website</a>
-          <a class="button" href="#">YouTube</a>
-          <a class="button" href="#">Instagram</a>
-          <a class="button" href="#">Facebook</a>
+          {% for platform in site.links %}
+          <a class="button" href="{{ platform.url }}" target="_blank"
+            ><i class="{{ platform.icon }}"></i> {{ platform.name }}</a
+          >
+          {% endfor %}
         </div>
       </div>
     </main>
     <footer>
-      Copyright {{ site.time | date: "%Y" }} - {{ page.title }} - Created by
-      Georgi Zhelyazkov
+      Copyright {{ site.time | date: "%Y" }} - {{ site.title }} - Created by {{
+      site.author }}
     </footer>
   </body>
 </html>
