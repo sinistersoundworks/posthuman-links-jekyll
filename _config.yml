@@ -40,7 +40,7 @@ links:
   - name: "Spotify"
     icon: "fab fa-spotify"
     url: "https://open.spotify.com/artist/32ecVDg6esdPpdJiakOrtw?si=wvXhEcmyRDWK3bqEeG35fg"
-  - name: "Apple Music"
+  - name: "Music"
     icon: "fab fa-apple"
     url: "https://music.apple.com/cz/artist/posthuman/1694781385"
   - name: "YouTube"
