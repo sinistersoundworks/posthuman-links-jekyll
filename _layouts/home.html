@@ -6,7 +6,7 @@ title: POSTHUMAN
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ page.title }}</title>
+    <title>{{ site.title }}</title>
     <link
       href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
       rel="stylesheet"
@@ -16,148 +16,176 @@ title: POSTHUMAN
       crossorigin="anonymous"
     ></script>
     <style>
-      body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) for darkness */
-        z-index: -1;
-      }
-      body {
-        font-family: "Oswald", Arial, sans-serif; /* Use Oswald font and fallback to Arial if needed */
-        text-align: center;
-        background-color: #121717;
-        color: #a9b1ab;
-        margin: 0;
-        padding: 0;
-        position: relative; /* Make the body a positioning context */
-        {% if site.background_image %}
-          background-image: url("{{ site.background_image }}");
-          background-size: cover;
-          background
-        {% endif %}
-      }
-      .logo {
-        max-height: 100px !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-      }
-      header {
-        /* background-color: #333; */
-        color: #fff;
-        padding-top: 60px;
-        padding-bottom: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      h1 {
-        font-size: 36px;
-        color: #fff;
-      }
-      p {
-        font-size: 18px;
-      }
-      .container {
-        max-width: 960px;
-        margin: 0 auto;
-        padding-bottom: 50px; /* Reserve space for the footer */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        /* background-color: rgba(0, 0, 0, 0.6); Set the opacity (alpha) to 0.8 for 80% transparency */
-        background-blend-mode:saturation;
-      }
-      .links {
-        margin-top: 60px;
-        margin-bottom: 60px;
-        /* background-color: #333; */
-        /* color: #fff; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      a {
-        text-decoration: none;
-        color: #000;
-        font-size: 20px;
-        margin: 10px 0;
-        padding: 10px 20px;
-        display: inline-block;
-        /* background-color: #fff; */
-        /* border: 1px solid #ccc; */
-        border-radius: 5px;
-        transition: background-color 0.2s, color 0.2s;
-      }
-      a:hover {
-        color: #fff;
-        /* background-color: #333; */
-      }
-      .button {
-        background-color: #64706a;
-        width: 100%;
-        color: #fff;
-        border-radius: 10px;
-        /* border: #fff; */
-        padding: 10px;
-        margin: 10px;
-      }
-      .button:hover {
-        background-color: #a9b1ab;
-        /* width: 30%; */
-        color: #64706a;
-        /* border-radius: 10px;
-        border: #fff;
-        padding: 10px;
-        margin: 10px; */
-      }
-      .latest-release {
-        margin: 20px auto; /* Center the entire div horizontally */
-        max-width: 400px;
-        max-height: 400px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; /* Center the content vertically and horizontally */
-      }
-      .latest-release img {
-        max-width: 100%;
-        max-height: 300px; /* Set a maximum height for the logo image */
-        border: none; /* Remove the border */
-        margin: 0; /* Remove spacing between the image and the parent div */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      .latest-release img:hover {
-        filter: brightness(
-          1.5
-        ); /* Increase brightness on hover (you can adjust the value) */
-      }
-      .cover-image {
-        margin: 0%;
-      }
-      .bio {
-        /* padding-bottom: 60px; */
-        display: flex;
-        max-width: 80%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      footer {
-        position: absolute; /* Position the footer absolutely */
-        bottom: 0; /* Stick it to the bottom of the viewport */
-        width: 100%;
-        font-size: smaller;
-        /* background-color: #333; */
-        /* color: #fff; */
-        padding: 10px 0;
+        body::before {
+          content: "";
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) for darkness */
+          z-index: -1;
+        }
+        body {
+          font-family: "Oswald", Arial, sans-serif; /* Use Oswald font and fallback to Arial if needed */
+          text-align: center;
+          background-color: #121717;
+          color: #a9b1ab;
+          margin: 0;
+          padding: 0;
+          position: relative; /* Make the body a positioning context */
+          {% if site.background_image %}
+            background-image: url("{{ site.background_image }}");
+            background-size: cover;
+            background
+          {% endif %}
+        }
+        .logo {
+          max-height: 100px !important;
+          max-width: 100% !important;
+          margin: 0 !important;
+        }
+        header {
+          /* background-color: #333; */
+          color: #fff;
+          padding-top: 60px;
+          padding-bottom: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        h1 {
+          font-size: 36px;
+          color: #fff;
+        }
+        p {
+          font-size: 18px;
+        }
+        .container {
+          max-width: 960px;
+          margin: 0 auto;
+          padding-bottom: 50px; /* Reserve space for the footer */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          /* background-color: rgba(0, 0, 0, 0.6); Set the opacity (alpha) to 0.8 for 80% transparency */
+          background-blend-mode:saturation;
+        }
+        .links {
+          margin-top: 20px;
+          margin-bottom: 60px;
+          /* background-color: #333; */
+          width: 40%;
+          /* color: #fff; */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        a {
+          text-decoration: none;
+          color: #000;
+          font-size: 20px;
+          margin: 10px 0;
+          padding: 10px 20px;
+          display: inline-block;
+          /* background-color: #fff; */
+          /* border: 1px solid #ccc; */
+          border-radius: 5px;
+          transition: background-color 0.2s, color 0.2s;
+        }
+        a:hover {
+          color: #fff;
+          /* background-color: #333; */
+        }
+        .button {
+          background-color: #64706a;
+          width: 100%;
+          color: #fff;
+          border-radius: 10px;
+          /* border: #fff; */
+          padding: 10px;
+          margin: 10px;
+        }
+        .button:hover {
+          background-color: #a9b1ab;
+          /* width: 30%; */
+          color: #64706a;
+          /* border-radius: 10px;
+          border: #fff;
+          padding: 10px;
+          margin: 10px; */
+        }
+        .latest-release {
+          margin: 20px auto; /* Center the entire div horizontally */
+          max-width: 400px;
+          max-height: 400px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center; /* Center the content vertically and horizontally */
+        }
+        .latest-release img {
+          max-width: 100%;
+          max-height: 600px; /* Set a maximum height for the logo image */
+          border: none; /* Remove the border */
+          margin: 0; /* Remove spacing between the image and the parent div */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        .latest-release img:hover {
+          filter: brightness(
+            1.5
+          ); /* Increase brightness on hover (you can adjust the value) */
+        }
+        .cover-image {
+          margin: 0%;
+        }
+        .bio {
+          /* padding-bottom: 60px; */
+          display: flex;
+          max-width: 80%;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        footer {
+          position: absolute; /* Position the footer absolutely */
+          bottom: 0; /* Stick it to the bottom of the viewport */
+          width: 100%;
+          font-size: smaller;
+          /* background-color: #333; */
+          /* color: #fff; */
+          padding: 10px 0;
+        }
+              /* CSS for smaller screens (mobile) */
+        @media screen and (max-width: 768px) {
+          .logo {
+            max-height: 60px !important; /* Adjust the size as needed for mobile */
+          }
+          .links {
+            width: 80%;
+          }
+
+          a {
+            font-size: 26px;
+            padding: 12px 24px; /* Increase button padding for mobile */
+          }
+
+          .button {
+            width: 100%;
+            padding: 12px; /* Increase button padding for mobile */
+            margin: 8px;
+          }
+          .latest-release img {
+          max-width: 100%;
+          max-height: auto;
+          padding: 0%;
+          margin: 0%;
+          /* max-height: 300px; */
+        }
       }
     </style>
   </head>
@@ -194,9 +222,6 @@ title: POSTHUMAN
         </div>
       </div>
     </main>
-    <footer>
-      Copyright {{ site.time | date: "%Y" }} - {{ site.title }} - Created by {{
-      site.author }}
-    </footer>
+    <footer>© {{ site.author | upcase }} {{ site.time | date: "%Y" }}</footer>
   </body>
 </html>
