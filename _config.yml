@@ -20,12 +20,11 @@
 
 title: POSTHUMAN
 email: contact@posthumanband.com
-author: Sinister Soundworks
+author: POSTHUMAN # This will display in the Footer - copyright notice
 logo: assets/img/posthuman-logo-white.png
 background_image: assets/img/posthuman-web-bg.jpg
 description: >- # this means to ignore newlines until "baseurl:"
-  Bio... Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. 
-  De solus animata corpora quaeritis sicut de iride et serpens. Pestilentia, ipsa screams. Pestilentia est haec ambulabat mortuos.
+  5 piece metal band based in Prague, CZ. Delivering chunky chugs with an enveloping atmospheric back-drop.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://posthumanband.com" # the base hostname & protocol for your site, e.g. http://example.com
 
