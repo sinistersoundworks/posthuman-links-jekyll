@@ -2,15 +2,12 @@
 
 ### macOS setup
 
-### Install ruby
-```
-brew install ruby #this step is probably not be needed
-```
 
 ### Install rbenv
 ```
 brew install rbenv ruby-build
 ```
+if this fails, you might nbeed to install ruby first `brew install ruby`
 
 ### Install ruby >= 3.1.2
 ```
