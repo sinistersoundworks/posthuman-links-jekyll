@@ -29,7 +29,7 @@ cd posthuman-links-jekyll
 bundle install
 ```
 
-## Develop
+### Develop
 ```
 bundle exec jekyll serve [-l] [-H host] 
 ```
