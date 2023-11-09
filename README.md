@@ -7,7 +7,7 @@
 ```
 brew install rbenv ruby-build
 ```
-if this fails, you might nbeed to install ruby first `brew install ruby`
+if this fails, you might need to install ruby first `brew install ruby`
 
 ### Install ruby >= 3.1.2
 ```
