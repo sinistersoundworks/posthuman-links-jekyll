@@ -40,7 +40,7 @@ title: POSTHUMAN
         background-size: cover;
       }
       h1 {
-        font-size: 36px;
+        font-size: 28px;
         color: #fff;
       }
       p {
@@ -82,33 +82,79 @@ title: POSTHUMAN
         margin-bottom: 2.5rem;
       }
       .button {
-        background-color: #64706a;
+        /* background-color: #64706a; */
         width: 100%;
         color: #fff;
         font-size: smaller;
       }
       .button:hover {
-        background-color: #a9b1ab;
-        color: #64706a;
+        background-color: #64706a;
+        color: #fff;
         transition: background-color 0.5s, color 0.5s;
       }
+      /* footer {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        /* background-color: #000; */
+      /*color: #fff; 
+      padding: 10px;
+      } */
       footer {
         display: flex;
         justify-content: center;
+        width: 100%;
+        color: #fff;
+        padding: 10px;
+        margin-top: auto;
       }
-      @media screen and (max-width: 768px) {
+      @media only screen and (max-device-width: 480px) {
+        h1 {
+          font-size: 60px;
+          margin-bottom: 60px;
+        }
+        p {
+          font-size: xxx-large;
+        }
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
         .logo {
           max-width: 86%;
+          margin-bottom: 60px;
+        }
+        .bio {
+          max-width: 86%;
+          margin-bottom: 60px;
+        }
+        .latest-release {
+          width: 100%;
+          margin-bottom: 60px;
         }
         .links {
-          max-width: 100%;
+          max-width: 86%;
+          height: 66px;
         }
         .latest-release img {
-          max-width: 100%;
-          max-height: 600px;
+          max-width: 100% !important;
+          /* max-height: auto; */
         }
         .button {
-          font-size: medium;
+          font-size: 40px;
+          max-width: 86%;
+          height: 140px !important;
+          line-height: 140px !important;
+          margin-bottom: 40px;
+          border-radius: 30px;
+        }
+        footer {
+          position: relative; /* Change to relative for mobile screens */
+          bottom: auto; /* Remove the fixed positioning for mobile screens */
         }
       }
     </style>
